@@ -1,5 +1,5 @@
 # ☁️ aws lambda prj2epsg service ☁️
-
+## Warning: This is a garbage-in-progress project but at least it works.
 ## Do this:
 1. `mvn package`
 1.  Grab `prj2epsg-cli-app-1.0-SNAPSHOT.jar` in `target/` directory (**not** the `original-...` jarfile)
