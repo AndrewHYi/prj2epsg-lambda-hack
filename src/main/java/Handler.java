@@ -12,9 +12,12 @@ public class Handler implements RequestHandler<Map<String,String>, String>{
     public String handleRequest(Map<String,String> event, Context context)
     {
         LambdaLogger logger = context.getLogger();
+        Prj2EPSG service = new Prj2EPSG();
+        String wkt = event.get("terms");
+        Map<String, Object> response = service.lookupFromWkt(wkt);
 
         logger.log("\n==== WKT: " + wkt);
         logger.log("\n==== LIB ANSWER RETURNED: " + response.toString());
-        return gson.toJson({});
+        return gson.toJson(response);
     }
 }
